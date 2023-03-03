@@ -1,0 +1,57 @@
+.success-view-container {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 30px;
+}
+@media (max-width: 481px) {
+  .success-view-container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .about-name {
+    font-size: 20px;
+  }
+  .vaccines-be-ready-for-distribution {
+    font-size: 16px;
+  }
+}
+.about-name {
+  margin-top: 0px;
+  font-size: 28px;
+  font-weight: 500;
+  font-family: 'roboto';
+  color: #f8fafc;
+}
+.about-data-container {
+  color: #f8fafc;
+}
+.about-last-update {
+  color: #94a3b8;
+}
+.vaccines-be-ready-for-distribution {
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'roboto';
+  color: #f8fafc;
+}
+.faqs-list-container {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'roboto';
+  font-style: 'normal';
+}
+.retry-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.retry-button {
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: aqua;
+  font-family: 'roboto';
+  font-weight: 500;
+}

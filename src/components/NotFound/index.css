@@ -1,0 +1,37 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 30px;
+}
+.not-found-img {
+  background-image: #1e1e30;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  color: #1e1e30;
+  border-radius: 18px;
+  margin: 0px;
+  padding: 20px;
+}
+.page-not-found-name {
+  color: #cbd5e1;
+}
+.we-are-sorry {
+  color: #94a3b8;
+  margin: 0px;
+}
+.back-to-homepage {
+  color: #94a3b8;
+}
+.button {
+  background-color: #2563eb;
+  color: #cbd5e1;
+  padding: 12px;
+  font-weight: 500;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 5px;
+}

@@ -1,0 +1,34 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.web-name {
+  font-family: 'Bree Serif';
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  color: #f8fafc;
+  text-align: center;
+}
+.country {
+  color: #3b82f6;
+}
+.p-line {
+  color: #94a3b8;
+  margin: 0px;
+  text-align: center;
+}
+.footer-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.footer-image {
+  padding-left: 10px;
+  padding-right: 10px;
+}

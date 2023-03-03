@@ -1,0 +1,16 @@
+.state-union-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.details {
+  font-size: 14px;
+}
+.name {
+  color: #f8fafc;
+  width: 20%;
+}
+.population {
+  color: #94a3b8;
+}

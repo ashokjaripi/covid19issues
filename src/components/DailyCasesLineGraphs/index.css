@@ -1,0 +1,36 @@
+.each-line-graph {
+  height: 350px;
+  border-radius: 14px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.heading {
+  font-size: 15px;
+  font-weight: 400;
+  font-style: 'roboto';
+}
+.line-graph-heading {
+  display: flex;
+  justify-content: flex-end;
+}
+.line-graph-confirmed {
+  background-color: #331427;
+  color: #ff073a;
+}
+.line-graph-active {
+  background-color: #132240;
+  color: #007bff;
+}
+.line-graph-deceased {
+  background-color: #1c1c2b;
+  color: #6c757d;
+}
+
+.line-graph-recovered {
+  background-color: #182829;
+  color: #27a243;
+}
+.line-graph-tested {
+  background-color: #230f41;
+  color: #9673b9;
+}

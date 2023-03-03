@@ -1,0 +1,26 @@
+.bar-chart {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.normal-screen {
+  height: 100%;
+  width: 100%;
+}
+.mobile-screen {
+  display: none;
+}
+@media (max-width: 481px) {
+  .normal-screen {
+    display: none;
+  }
+  .mobile-screen {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+  .bar-chart {
+    height: 280px;
+  }
+}

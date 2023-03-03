@@ -1,0 +1,51 @@
+.case {
+  text-align: center;
+  font-family: 'roboto';
+  cursor: pointer;
+}
+
+@media (max-width: 481px) {
+  .case {
+    width: 50%;
+  }
+}
+.click-confirmed {
+  color: #ff073a;
+}
+.click-confirmed:hover {
+  background-color: #331427;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 12px;
+}
+.click-active {
+  color: #007bff;
+}
+.click-active:hover {
+  background-color: #132240;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 12px;
+}
+.click-recovered {
+  color: #28a745;
+}
+.click-recovered:hover {
+  background-color: #182829;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 12px;
+}
+.click-deceased {
+  color: #6c757d;
+}
+.click-deceased:hover {
+  background-color: #212230;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 12px;
+}
+.case-name {
+  font-size: 18px;
+  font-weight: 400;
+}

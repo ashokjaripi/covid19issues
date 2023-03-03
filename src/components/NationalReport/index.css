@@ -1,0 +1,37 @@
+.national-cases {
+  margin-top: 5%;
+  padding-left: 8%;
+  padding-right: 8%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+@media (max-width: 481px) {
+  .national-cases {
+    flex-direction: column;
+  }
+}
+.two-column {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.case {
+  text-align: center;
+  font-weight: 500;
+}
+.confirmed {
+  color: #ff073a;
+}
+.active {
+  color: #007bff;
+}
+.recovered {
+  color: #28a745;
+}
+.deceased {
+  color: #6c757d;
+}

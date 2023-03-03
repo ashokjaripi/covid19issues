@@ -1,0 +1,11 @@
+.each-faq-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 32px;
+}
+.question {
+  color: #94a3b8;
+}
+.answer {
+  color: #007bff;
+}
