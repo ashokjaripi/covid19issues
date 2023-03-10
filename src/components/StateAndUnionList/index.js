@@ -306,10 +306,7 @@ class StateAndUnionList extends Component {
         {filteredList.length === 0 ? (
           <div className="cases-report">
             <NationalReport />
-            <div
-              className="state-union-list-container"
-              testid="stateWiseCovidDataTable"
-            >
+            <div className="state-union-list-container">
               <div className="state-union-list-header">
                 <div className="filter-group">
                   <p className="list-header">States/UT</p>
@@ -318,14 +315,14 @@ class StateAndUnionList extends Component {
                     className="filter-button"
                     onClick={this.onAscending}
                   >
-                    <FcGenericSortingAsc testid="ascendingSort" />
+                    <FcGenericSortingAsc />
                   </button>
                   <button
                     type="button"
-                    className="filter-button"
+                    className="filter-button desc-button"
                     onClick={this.onDescending}
                   >
-                    <FcGenericSortingDesc testid="descendingSort" />
+                    <FcGenericSortingDesc />
                   </button>
                 </div>
                 <p className="list-header">Confirmed</p>
@@ -346,14 +343,11 @@ class StateAndUnionList extends Component {
             <Footer />
           </div>
         ) : (
-          <ul
-            className="filtered-list-group"
-            testid="searchResultsUnorderedList"
-          >
+          <ul className="filtered-list-group">
             {filteredList.map(eachFilter => (
               <FilteredList
                 filterDetails={eachFilter}
-                key={eachFilter.state_code}
+                key={eachFilter.stateCode}
               />
             ))}
           </ul>
@@ -363,7 +357,7 @@ class StateAndUnionList extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="loader-container" testid="homeRouteLoader">
+    <div className="loader-container">
       <div className="state-list-loader-container">
         <Loader type="TailSpin" color="#bf3987" height="50" width="50" />
       </div>

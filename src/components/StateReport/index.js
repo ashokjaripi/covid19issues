@@ -10,11 +10,7 @@ const StateReport = props => {
   }
 
   return (
-    <div
-      className={`case click-${name}`}
-      onClick={getTopDistricts}
-      testid={`stateSpecific${type}CasesContainer`}
-    >
+    <li className={`case click-${name}`} onClick={getTopDistricts}>
       <h1 className="case-name">{type}</h1>
       <img
         className="case-image"
@@ -22,7 +18,7 @@ const StateReport = props => {
         alt={`state specific ${name} cases pic`}
       />
       <p className="case-count">{caseCount}</p>
-    </div>
+    </li>
   )
 }
 

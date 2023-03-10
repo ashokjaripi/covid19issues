@@ -4,7 +4,7 @@ function NationalReport() {
   return (
     <div className="national-cases">
       <div className="two-column">
-        <div className="case confirmed" testid="countryWideConfirmedCases">
+        <div className="case confirmed">
           <p className="">Confirmed</p>
           <img
             className=""
@@ -13,7 +13,7 @@ function NationalReport() {
           />
           <p className="">34285612</p>
         </div>
-        <div className="case active" testid="countryWideActiveCases">
+        <div className="case active">
           <p className="">Active</p>
           <img
             className=""
@@ -24,7 +24,7 @@ function NationalReport() {
         </div>
       </div>
       <div className="two-column">
-        <div className="case recovered" testid="countryWideRecoveredCases">
+        <div className="case recovered">
           <p className="">Recovered</p>
           <img
             className=""
@@ -33,7 +33,7 @@ function NationalReport() {
           />
           <p className="">33661339</p>
         </div>
-        <div className="case deceased" testid="countryWideDeceasedCases">
+        <div className="case deceased">
           <p className="">Deceased</p>
           <img
             className=""

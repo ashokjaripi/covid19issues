@@ -338,12 +338,13 @@ class SpecificState extends Component {
 
   getCasesTopDistricts = caseType => {
     const {stateData, lineGraphData} = this.state
-    // console.log(stateData)
     const {districts} = stateData[0]
-    // console.log(districts)
     const district = Object.entries(districts).map(eachDistricts => {
       const name = eachDistricts[0]
-      const caseCount = this.switchCase(eachDistricts[1].total, caseType)
+      let caseCount = this.switchCase(eachDistricts[1].total, caseType)
+      if (caseCount === undefined) {
+        caseCount = 0
+      }
       return {
         caseCount,
         districtName: name,
@@ -396,6 +397,8 @@ class SpecificState extends Component {
 
   renderTimelineSuccessView = () => {
     const {lineGraphData, barGraphData, className} = this.state
+    const callFunction =
+      barGraphData.length === 0 ? this.getConfirmedCase() : null
 
     return (
       <div>
@@ -409,7 +412,7 @@ class SpecificState extends Component {
   }
 
   renderTimelineLoadingView = () => (
-    <div className="loader-container" testid="timelinesDataLoader">
+    <div className="loader-container">
       <div className="state-list-loader-container">
         <Loader type="TailSpin" color="#bf3987" height="50" width="50" />
       </div>
@@ -428,7 +431,7 @@ class SpecificState extends Component {
     </div>
   )
 
-  renderSpecificState = () => {
+  renderApiTimeline = () => {
     const {apiTimeline} = this.state
 
     switch (apiTimeline) {
@@ -444,15 +447,8 @@ class SpecificState extends Component {
   }
 
   renderSuccessView = () => {
-    const {
-      stateData,
-      clickCaseDistrictData,
-      lineGraphData,
-      barGraphData,
-      className,
-    } = this.state
-    const callFunction =
-      clickCaseDistrictData.length === 0 ? this.getConfirmedCase() : null
+    const {stateData, clickCaseDistrictData, className} = this.state
+
     return (
       <div>
         <div className="specific-state-container">
@@ -475,17 +471,14 @@ class SpecificState extends Component {
               />
             ))}
           </div>
-          <div testid="lineChartsContainer">
+          <div>
             <div className="top-districts-container">
               <h1
                 className={`top-districts-name top-districts-clicked-${className}`}
               >
                 Top Districts
               </h1>
-              <ul
-                className="top-districts-list-container"
-                testid="topDistrictsUnorderedList"
-              >
+              <ul className="top-districts-list-container">
                 {clickCaseDistrictData.map(eachDistrict => (
                   <ClickedCaseAllDistrictsData
                     key={eachDistrict.districtName}
@@ -503,7 +496,7 @@ class SpecificState extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="loader-container" testid="stateDetailsLoader">
+    <div className="loader-container">
       <div className="state-list-loader-container">
         <Loader type="TailSpin" color="#bf3987" height="50" width="50" />
       </div>

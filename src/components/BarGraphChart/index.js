@@ -24,8 +24,9 @@ const BarGraphChart = props => {
   return (
     <div className="bar-chart">
       <div className="normal-screen">
+        {/* <ResponsiveContainer width="100%" height="100%"> */}
         <BarChart
-          width={730}
+          width={700}
           height={300}
           data={graphData}
           margin={{
@@ -42,26 +43,29 @@ const BarGraphChart = props => {
             />
           </Bar>
         </BarChart>
+        {/* </ResponsiveContainer> */}
       </div>
       <div className="mobile-screen">
-        <BarChart
-          width={730}
-          height={300}
-          data={graphData}
-          margin={{
-            top: 15,
-          }}
-        >
-          <XAxis dataKey="date" />
-          <Bar dataKey="clickedCaseCount" fill={color} radius={[5, 5, 0, 0]}>
-            <LabelList
-              dataKey="clickedCaseCount"
-              position="top"
-              angle="55"
-              fill={color}
-            />
-          </Bar>
-        </BarChart>
+        <ResponsiveContainer width="90%" height="100%">
+          <BarChart
+            width={700}
+            height={300}
+            data={graphData}
+            margin={{
+              top: 15,
+            }}
+          >
+            <XAxis dataKey="date" />
+            <Bar dataKey="clickedCaseCount" fill={color} radius={[5, 5, 0, 0]}>
+              <LabelList
+                dataKey="clickedCaseCount"
+                position="top"
+                angle="55"
+                fill={color}
+              />
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
       </div>
     </div>
   )

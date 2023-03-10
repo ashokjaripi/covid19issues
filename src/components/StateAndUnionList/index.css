@@ -60,7 +60,11 @@
 .filter-group {
   display: flex;
   align-items: center;
-  width: 20%;
+}
+@media (min-width: 482px) {
+  .filter-group {
+    width: 20%;
+  }
 }
 .filter-button {
   background-color: #1e1e30;
@@ -78,6 +82,18 @@
   border-bottom: 1px solid #475569;
   font-size: 16px;
 }
+@media (max-width: 481px) {
+  .state-union-list-container {
+    display: table;
+  }
+  .list-header {
+    padding-left: 15px;
+  }
+  .state-union-list-header {
+    justify-content: space-around;
+  }
+}
+
 .filtered-list-group {
   margin-top: 0px;
 }

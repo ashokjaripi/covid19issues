@@ -72,7 +72,7 @@ class About extends Component {
             COVID-19 vaccines be ready for distribution
           </h1>
         </div>
-        <ul className="faqs-list-container" testid="faqsUnorderedList">
+        <ul className="faqs-list-container">
           {faqsData.map(eachFaq => (
             <FaqsData faqDetails={eachFaq} key={eachFaq.qno} />
           ))}
@@ -83,7 +83,7 @@ class About extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="loader-container" testid="aboutRouteLoader">
+    <div className="loader-container">
       <div className="state-list-loader-container">
         <Loader type="TailSpin" color="#bf3987" height="50" width="50" />
       </div>
